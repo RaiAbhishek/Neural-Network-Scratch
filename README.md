@@ -1,5 +1,5 @@
 # Neural Network Scratch
-Implemenation of a Simple Neural Net having one hidden layer using Numpy.
+Implementation of a Simple Neural Net having one hidden layer using Numpy.
 
 The code is inspired from numerous resources I have went through. Therefore, copied, sort of.
 
