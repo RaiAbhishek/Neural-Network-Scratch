@@ -126,7 +126,6 @@ for epoch in range(1,num_epochs+1):
 
         loss = output_layer - output_labels
 
-        #weight_i_h -= (loss * d_activation(output_layer)) * weight_h_o * d_activation(hidden_layer) * input_layer
         weight_i_h -= 0.01*input_layer.T.dot(((loss * d_activation(output_layer)).dot(weight_h_o.T)) * d_activation(hidden_layer))
         bias_i_h -= 0.01*((loss * d_activation(output_layer)).dot(weight_h_o.T)) * d_activation(hidden_layer)
         weight_h_o -= 0.01*hidden_layer.T.dot(loss * d_activation(output_layer))
