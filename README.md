@@ -1,7 +1,7 @@
 # Neural Network Scratch
 Implementation of a Simple Neural Net having one hidden layer using Numpy.
 
-The code is inspired from numerous resources I have went through. Therefore, copied, sort of.
+The code is inspired from numerous resources I have went through.
 
 # Dataset
 The training and test data are reflections of first 64 whole numbers in binary. Alternate values go into training and testing dataset (starting from training) giving us 32 for training as well as testing.
