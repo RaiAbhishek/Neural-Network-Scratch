@@ -5,7 +5,7 @@ import numpy as np
 
 np.random.seed(42)
 
-# Define Sigmoid Activation and it's derivative
+# Define Sigmoid Activation and its derivative
 def activate(x):
     return 1 / (1+np.exp(-x))
 def d_activation(x):
@@ -110,18 +110,18 @@ test_data  =  np.array([[1,0,1,1,0,1],
                         [1,0,1,1,1,1],
                         [1,0,0,0,0,1]])
 
-# Training Parameters                        
+# Define Training Parameters                        
 num_epochs = 60000
 n_samples = input_data.shape[0]
 batch_size = 16
 
-# Weights and Biases
+# Initialize Weights and Biases
 weight_i_h = np.random.random((6,16))
 weight_h_o = np.random.random((16,1))
 bias_i_h = np.random.random((1, 16))
 bias_h_o = np.random.random((1, 1))
 
-# Lists to store epoch and error
+# Create empty lists to store epoch and loss
 x = []
 y = []
 
