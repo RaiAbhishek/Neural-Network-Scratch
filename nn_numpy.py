@@ -143,14 +143,20 @@ for epoch in range(1,num_epochs+1):
         bias_h_o -= 0.01 * sum(loss * d_activation(output_layer))
     
     # Store checkpoints for plot
-    if epoch == 1 or epoch % 6000 == 0:
+    if epoch == 1:
+        print ('Training in progress...')
+        print ('Epoch: ', '%06d' % (epoch), 'Loss: {0:.5f}'.format((sum(abs(loss)))[0]))
+    if epoch % 6000 == 0:
         print ('Epoch: ', '%06d' % (epoch), 'Loss: {0:.5f}'.format((sum(abs(loss)))[0]))
         x.append(epoch)
         y.append((sum(abs(loss)))[0])
+print ('Model Trained !')
 
+print ('')
+print ('Training Graph --')
 # Plot the Loss
 import matplotlib.pyplot as plt
-plt.plot(x[1:], y[1:], label = 'Loss')
+plt.plot(x, y, label = 'Loss')
 plt.legend()
 plt.xlabel('Number of Epochs')
 plt.ylabel('Loss')
@@ -160,4 +166,5 @@ plt.show()
 # Test the model
 test = test_data[:16]
 prediction = activate((activate(test.dot(weight_i_h) + bias_i_h)).dot(weight_h_o) + bias_h_o)
+print ('Test Output --')
 print ((np.round(prediction, decimals=0)).astype(int))
