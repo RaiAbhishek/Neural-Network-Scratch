@@ -1,6 +1,8 @@
 from __future__ import print_function
 
+import matplotlib.pyplot as plt
 import numpy as np
+
 np.random.seed(42)
 
 # Define Sigmoid Activation and it's derivative
@@ -153,9 +155,9 @@ for epoch in range(1,num_epochs+1):
 print ('Model Trained !')
 
 print ('')
-print ('Training Graph --')
+
 # Plot the Loss
-import matplotlib.pyplot as plt
+print ('Training Graph --')
 plt.plot(x, y, label = 'Loss')
 plt.legend()
 plt.xlabel('Number of Epochs')
